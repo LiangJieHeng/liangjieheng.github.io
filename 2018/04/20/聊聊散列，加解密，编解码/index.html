@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>LJH</title>
+  <title>聊聊散列，加解密，编解码 | LJH</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个总想做点事情的人">
-<meta property="og:type" content="website">
-<meta property="og:title" content="LJH">
-<meta property="og:url" content="http://liangjieheng.github.io/index.html">
+  <meta name="description" content="笔者最近在回顾以前的基础知识，发现还是有几个基础的概念模糊不清，其中一组概念就是散列(哈希)，加解密，编解码。他们的目的和作用各不相同。下面结合几个例子加以说明。 散列(哈希)散列(哈希)的主要目的是验证数据的完整性，能够保证数据在传输的过程中不被篡改。如果修改了一点里面的内容，那么得出来的哈希值是完全不一样的，同时它是一种不可逆的算法，也就是说他不能从哈希值反推出没经过哈希的值，因此它非常适合用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="聊聊散列，加解密，编解码">
+<meta property="og:url" content="http://liangjieheng.github.io/2018/04/20/聊聊散列，加解密，编解码/index.html">
 <meta property="og:site_name" content="LJH">
-<meta property="og:description" content="一个总想做点事情的人">
+<meta property="og:description" content="笔者最近在回顾以前的基础知识，发现还是有几个基础的概念模糊不清，其中一组概念就是散列(哈希)，加解密，编解码。他们的目的和作用各不相同。下面结合几个例子加以说明。 散列(哈希)散列(哈希)的主要目的是验证数据的完整性，能够保证数据在传输的过程中不被篡改。如果修改了一点里面的内容，那么得出来的哈希值是完全不一样的，同时它是一种不可逆的算法，也就是说他不能从哈希值反推出没经过哈希的值，因此它非常适合用">
+<meta property="og:updated_time" content="2018-04-20T08:26:27.011Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LJH">
-<meta name="twitter:description" content="一个总想做点事情的人">
+<meta name="twitter:title" content="聊聊散列，加解密，编解码">
+<meta name="twitter:description" content="笔者最近在回顾以前的基础知识，发现还是有几个基础的概念模糊不清，其中一组概念就是散列(哈希)，加解密，编解码。他们的目的和作用各不相同。下面结合几个例子加以说明。 散列(哈希)散列(哈希)的主要目的是验证数据的完整性，能够保证数据在传输的过程中不被篡改。如果修改了一点里面的内容，那么得出来的哈希值是完全不一样的，同时它是一种不可逆的算法，也就是说他不能从哈希值反推出没经过哈希的值，因此它非常适合用">
   
     <link rel="alternate" href="/atom.xml" title="LJH" type="application/atom+xml">
   
@@ -62,9 +63,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-聊聊散列，加解密，编解码" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-聊聊散列，加解密，编解码" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/04/20/聊聊散列，加解密，编解码/" class="article-date">
   <time datetime="2018-04-20T08:21:08.000Z" itemprop="datePublished">2018-04-20</time>
@@ -77,8 +76,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/20/聊聊散列，加解密，编解码/">聊聊散列，加解密，编解码</a>
+    <h1 class="article-title" itemprop="name">
+      聊聊散列，加解密，编解码
     </h1>
   
 
@@ -106,47 +105,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello_world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/11/10/hello_world/" class="article-date">
-  <time datetime="2017-11-10T04:21:51.000Z" itemprop="datePublished">2017-11-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/10/hello_world/">hello world</a>
-    </h1>
+    <a href="/2017/11/10/hello_world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hello world</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>hello world</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://liangjieheng.github.io/2017/11/10/hello_world/" data-id="cjg7oye3i0000xhlgnamwpl31" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         
