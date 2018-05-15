@@ -102,17 +102,17 @@
 
 
 
-  <meta name="description" content="一个总想做点事情的菜鸟程序员">
+  <meta name="description" content="ubuntu版本:18.04mysql版本:5.7.22安装mysqlsudo apt-get install mysql-server查看mysql版本mysql -V安装以后要修改root密码，打开/etc/mysql/debian.cnfsudo cat /etc/mysql/debian.cnf找到user和password，使用debian.cnf找到的user和password登录my">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在ubuntu 18.04上部署mysql 5.7.22">
 <meta property="og:url" content="http://liangjieheng.github.io/2018/05/15/在ubuntu-18-04上部署mysql-5-7-22/index.html">
 <meta property="og:site_name" content="LJH’s Blog">
-<meta property="og:description" content="一个总想做点事情的菜鸟程序员">
+<meta property="og:description" content="ubuntu版本:18.04mysql版本:5.7.22安装mysqlsudo apt-get install mysql-server查看mysql版本mysql -V安装以后要修改root密码，打开/etc/mysql/debian.cnfsudo cat /etc/mysql/debian.cnf找到user和password，使用debian.cnf找到的user和password登录my">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-15T03:39:06.899Z">
+<meta property="og:updated_time" content="2018-05-15T03:42:46.035Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在ubuntu 18.04上部署mysql 5.7.22">
-<meta name="twitter:description" content="一个总想做点事情的菜鸟程序员">
+<meta name="twitter:description" content="ubuntu版本:18.04mysql版本:5.7.22安装mysqlsudo apt-get install mysql-server查看mysql版本mysql -V安装以后要修改root密码，打开/etc/mysql/debian.cnfsudo cat /etc/mysql/debian.cnf找到user和password，使用debian.cnf找到的user和password登录my">
 
 
 
@@ -327,12 +327,34 @@
                 
               
 
-              <time title="创建时间：2018-05-15 11:39:06" itemprop="dateCreated datePublished" datetime="2018-05-15T11:39:06+08:00">2018-05-15</time>
+              <time title="创建时间：2018-05-15 11:39:06 / 修改时间：11:42:46" itemprop="dateCreated datePublished" datetime="2018-05-15T11:39:06+08:00">2018-05-15</time>
             
 
+            
+              
+
+              
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -361,7 +383,8 @@
       
 
       
-        
+        <p>ubuntu版本:18.04<br>mysql版本:5.7.22<br>安装mysql<br>sudo apt-get install mysql-server<br>查看mysql版本<br>mysql -V<br>安装以后要修改root密码，打开/etc/mysql/debian.cnf<br>sudo cat /etc/mysql/debian.cnf<br>找到user和password，使用debian.cnf找到的user和password登录mysql，登录mysql以后<br>进入mysql数据库<br>use mysql<br>更新root密码<br>update user set authentication_string = password(‘yourpassword’) where user=’root’；<br>赋予外部机器访问本地数据库的权限<br>grant all privileges on <em>.</em> to root@”%” identified by “yourpassword”;<br>更新权限<br>flush privileges;<br>退出<br>exit<br>取消绑定本地地址<br>vim mysql.conf.d/mysqld.cnf<br>找到bind-address = 127.0.0.1，加上#注释掉<br>重启mysql服务<br>sudo service mysql restart</p>
+
       
     </div>
 
@@ -478,7 +501,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
