@@ -331,7 +331,7 @@
                 
               
 
-              <time title="创建时间：2018-05-15 11:39:06 / 修改时间：11:43:52" itemprop="dateCreated datePublished" datetime="2018-05-15T11:39:06+08:00">2018-05-15</time>
+              <time title="创建时间：2018-05-15 11:39:06 / 修改时间：11:45:37" itemprop="dateCreated datePublished" datetime="2018-05-15T11:39:06+08:00">2018-05-15</time>
             
 
             
@@ -388,10 +388,14 @@
 
       
         
-          
-            <p>ubuntu版本:18.04<br>mysql版本:5.7.22<br>安装mysql<br>sudo apt-get install mysql-server<br>查看mysql版本<br>mysql -V<br>安装以后要修改root密码，打开/etc/mysql/debian.cnf<br>sudo cat /etc/mysql/debian.cnf<br>找到user和password，使用debian.cnf找到的user和password登录mysql，登录mysql以后<br>进入mysql数据库<br>use mysql<br>更新root密码<br>update user set authentication_string = password(‘yourpassword’) where user=’root’；<br>赋予外部机器访问本地数据库的权限<br>grant all privileges on <em>.</em> to root@”%” identified by “yourpassword”;<br>更新权限<br>flush privileges;<br>退出<br>exit<br>取消绑定本地地址<br>vim mysql.conf.d/mysqld.cnf<br>找到bind-address = 127.0.0.1，加上#注释掉<br>重启mysql服务<br>sudo service mysql restart</p>
-
-          
+          <p>ubuntu版本:18.04<br>mysql版本:5.7.22<br>安装mysql<br>sudo apt-get install mysql-server<br>查看mysql版本<br>mysql -V<br>安装以后要修改root密码，打开/etc/mysql/debian.cnf<br>sudo cat /etc/mysql/debian.cnf<br>找到user和password，使用debian.cnf找到的user和password登录mysql，登录mysql以后<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/15/在ubuntu上部署mysql/#更多" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
