@@ -102,24 +102,27 @@
 
 
 
-  <meta name="description" content="同步与异步：这两个概念与通知机制有关，关注点是通知机制。同步指的是调用者需要等待被调用者的返回，是一种可靠的任务序列；异步指的是调用者无需等待被调用者的返回，是一种不可靠的任务序列，不能感知被调用者是否执行失败。 阻塞和非阻塞：关注点是在等待消息通知时的状态。这两个概念与程序（线程）等待消息通知(无所谓同步或者异步)时的状态有关。也就是说阻塞与非阻塞主要是程序（线程）等待消息通知时的状态角度来说的">
+  <meta name="description" content="MySQL是我们在开发中最常用的数据库之一，它满足我们平常大部分的需求，而且它还是免费开源的。 MySQL逻辑架构MySQL的逻辑架构总共有三层服务层服务层主要负责连接处理，安全认证等 核心层核心层主要负责查询解析，分析，优化，缓存等。存储过程，触发器，视图也在这层实现。 存储引擎存储引擎层负责MySQL的数据存储和提取。核心服务层主要通过数量不多的API与存储引擎交互。 MySQL查询过程通过这">
 <meta property="og:type" content="article">
-<meta property="og:title" content="聊聊同步，异步，阻塞，非阻塞">
-<meta property="og:url" content="http://liangjieheng.github.io/2018/04/23/聊聊同步，异步，阻塞，非阻塞/index.html">
+<meta property="og:title" content="《MySQL简介">
+<meta property="og:url" content="http://liangjieheng.github.io/2018/05/31/MySQL简介/index.html">
 <meta property="og:site_name" content="LJH’s Blog">
-<meta property="og:description" content="同步与异步：这两个概念与通知机制有关，关注点是通知机制。同步指的是调用者需要等待被调用者的返回，是一种可靠的任务序列；异步指的是调用者无需等待被调用者的返回，是一种不可靠的任务序列，不能感知被调用者是否执行失败。 阻塞和非阻塞：关注点是在等待消息通知时的状态。这两个概念与程序（线程）等待消息通知(无所谓同步或者异步)时的状态有关。也就是说阻塞与非阻塞主要是程序（线程）等待消息通知时的状态角度来说的">
+<meta property="og:description" content="MySQL是我们在开发中最常用的数据库之一，它满足我们平常大部分的需求，而且它还是免费开源的。 MySQL逻辑架构MySQL的逻辑架构总共有三层服务层服务层主要负责连接处理，安全认证等 核心层核心层主要负责查询解析，分析，优化，缓存等。存储过程，触发器，视图也在这层实现。 存储引擎存储引擎层负责MySQL的数据存储和提取。核心服务层主要通过数量不多的API与存储引擎交互。 MySQL查询过程通过这">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-23T10:16:39.354Z">
+<meta property="og:image" content="http://liangjieheng.github.io/2018/05/31/MySQL简介/media/15275992444838/2012031510324452.png">
+<meta property="og:image" content="http://liangjieheng.github.io/2018/05/31/MySQL简介/media/15275992444838/1527600710376.jpg">
+<meta property="og:updated_time" content="2018-05-31T08:15:29.577Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="聊聊同步，异步，阻塞，非阻塞">
-<meta name="twitter:description" content="同步与异步：这两个概念与通知机制有关，关注点是通知机制。同步指的是调用者需要等待被调用者的返回，是一种可靠的任务序列；异步指的是调用者无需等待被调用者的返回，是一种不可靠的任务序列，不能感知被调用者是否执行失败。 阻塞和非阻塞：关注点是在等待消息通知时的状态。这两个概念与程序（线程）等待消息通知(无所谓同步或者异步)时的状态有关。也就是说阻塞与非阻塞主要是程序（线程）等待消息通知时的状态角度来说的">
+<meta name="twitter:title" content="《MySQL简介">
+<meta name="twitter:description" content="MySQL是我们在开发中最常用的数据库之一，它满足我们平常大部分的需求，而且它还是免费开源的。 MySQL逻辑架构MySQL的逻辑架构总共有三层服务层服务层主要负责连接处理，安全认证等 核心层核心层主要负责查询解析，分析，优化，缓存等。存储过程，触发器，视图也在这层实现。 存储引擎存储引擎层负责MySQL的数据存储和提取。核心服务层主要通过数量不多的API与存储引擎交互。 MySQL查询过程通过这">
+<meta name="twitter:image" content="http://liangjieheng.github.io/2018/05/31/MySQL简介/media/15275992444838/2012031510324452.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://liangjieheng.github.io/2018/04/23/聊聊同步，异步，阻塞，非阻塞/"/>
+  <link rel="canonical" href="http://liangjieheng.github.io/2018/05/31/MySQL简介/"/>
 
 
 
@@ -129,7 +132,7 @@
   };
 </script>
 
-  <title>聊聊同步，异步，阻塞，非阻塞 | LJH’s Blog</title>
+  <title>《MySQL简介 | LJH’s Blog</title>
   
 
 
@@ -285,7 +288,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liangjieheng.github.io/2018/04/23/聊聊同步，异步，阻塞，非阻塞/">
+    <link itemprop="mainEntityOfPage" href="http://liangjieheng.github.io/2018/05/31/MySQL简介/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LJH">
@@ -302,7 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">聊聊同步，异步，阻塞，非阻塞
+          <h1 class="post-title" itemprop="name headline">《MySQL简介
               
             
           </h1>
@@ -327,7 +330,7 @@
                 
               
 
-              <time title="创建时间：2018-04-23 17:51:36 / 修改时间：18:16:39" itemprop="dateCreated datePublished" datetime="2018-04-23T17:51:36+08:00">2018-04-23</time>
+              <time title="创建时间：2018-05-31 16:15:00 / 修改时间：16:15:29" itemprop="dateCreated datePublished" datetime="2018-05-31T16:15:00+08:00">2018-05-31</time>
             
 
             
@@ -383,8 +386,18 @@
       
 
       
-        <p>同步与异步：这两个概念与通知机制有关，关注点是通知机制。同步指的是调用者需要等待被调用者的返回，是一种可靠的任务序列；异步指的是调用者无需等待被调用者的返回，是一种不可靠的任务序列，不能感知被调用者是否执行失败。</p>
-<p>阻塞和非阻塞：关注点是在等待消息通知时的状态。这两个概念与程序（线程）等待消息通知(无所谓同步或者异步)时的状态有关。也就是说阻塞与非阻塞主要是程序（线程）等待消息通知时的状态角度来说的。阻塞就是在等待结果返回的时候，不能处理其他任务，处于等待的状态；非阻塞是在等待的时候，仍然能处理其他任务。</p>
+        <p>MySQL是我们在开发中最常用的数据库之一，它满足我们平常大部分的需求，而且它还是免费开源的。</p>
+<h3 id="MySQL逻辑架构"><a href="#MySQL逻辑架构" class="headerlink" title="MySQL逻辑架构"></a>MySQL逻辑架构</h3><p>MySQL的逻辑架构总共有三层<br><img src="media/15275992444838/2012031510324452.png" alt="2012031510324452"><br><strong>服务层</strong><br>服务层主要负责连接处理，安全认证等</p>
+<p><strong>核心层</strong><br>核心层主要负责查询解析，分析，优化，缓存等。存储过程，触发器，视图<br>也在这层实现。</p>
+<p><strong>存储引擎</strong><br>存储引擎层负责MySQL的数据存储和提取。核心服务层主要通过数量不多的API与存储引擎交互。</p>
+<h3 id="MySQL查询过程"><a href="#MySQL查询过程" class="headerlink" title="MySQL查询过程"></a>MySQL查询过程</h3><p><img src="media/15275992444838/1527600710376.jpg" alt="1527600710376"><br>通过这幅图，我们可以对MySQL的查询过程有了大概的了解。根据图中所示，主要有6个关注点。</p>
+<h3 id="客户端-服务器通信协议"><a href="#客户端-服务器通信协议" class="headerlink" title="客户端/服务器通信协议"></a>客户端/服务器通信协议</h3><p>有网络通讯，必定有通信协议的存在。MySQL通讯是半双工的，也就是说客户端与服务端通讯是双向的，要么客户端发送请求给服务端，要么服务端返回请求给客户端。<br>客户端只能通过一个数据包把请求发送给客户端。而服务端返回客户端的数据则可以通过多个数据包，而在实际的开发中，去除不必要的查询会加快数据库的响应速度。</p>
+<h3 id="查询缓存"><a href="#查询缓存" class="headerlink" title="查询缓存"></a>查询缓存</h3><p>在解析sql语句的时候，如果缓存打开了，MySQL会把结果直接返回给客户端，而不用就走后面的步骤。注意的如果两个sql语句不一样，包括增加了些空格等会导致不命中缓存。<br>MySQL会把缓存放在一张类似于hashmap数据结构的引用表中。<br>MySQL缓存失效与涉及的每张表的结构和数据发生变更有关的，任何的写操作都会到值缓存的失效。</p>
+<h3 id="语法解析和预处理"><a href="#语法解析和预处理" class="headerlink" title="语法解析和预处理"></a>语法解析和预处理</h3><p>这一过程主要是用来验证sql是否合法。语法解析会把sql语句生成解析树，通过语法规则来验证，比如验证。<br>关键字是否正确等等。预处理会根据MySQL规则验证解析树，比如检查字段是否存在等。</p>
+<h3 id="查询优化"><a href="#查询优化" class="headerlink" title="查询优化"></a>查询优化</h3><p>这一过程主要作用是把经过验证的sql生成多个执行计划，然后选择成本最低的执行计划。这一部分比较复杂，这里只是进行简单的描述。</p>
+<h3 id="查询执行引擎"><a href="#查询执行引擎" class="headerlink" title="查询执行引擎"></a>查询执行引擎</h3><p>通过上面计算出来最优的执行计划，执行引擎就可以用它来得出结果了。整个执行计划大部分操作都是通过调用存储引擎的handler api实现的，每张表是一个handler实例。</p>
+<h3 id="响应客户端"><a href="#响应客户端" class="headerlink" title="响应客户端"></a>响应客户端</h3><p>最后从存储引擎返回来的查询结构会返回给客户端。如果此时查询缓存打开了，MySQL也会把结果放到缓存中。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>我们再用简单的总结回顾下之前所说的。<br>1.客户端发送一个请求到MySQL服务器。<br>2.如果请求命中缓存，Mysql会把缓存中的结果返回给客户端，如果没有命中个，则进行下一步。<br>3.请求经过解析和预处理验证sql是否合法。<br>4.请求经过优化器生成最优的执行计划。<br>5.执行计划调用储存引擎api返回结果，同时也缓存结果。</p>
 
       
     </div>
@@ -412,8 +425,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/20/聊聊散列，加解密，编解码/" rel="next" title="聊聊散列，加解密，编解码">
-                <i class="fa fa-chevron-left"></i> 聊聊散列，加解密，编解码
+              <a href="/2018/05/15/在ubuntu上部署mysql/" rel="next" title="在ubuntu上部署mysql">
+                <i class="fa fa-chevron-left"></i> 在ubuntu上部署mysql
               </a>
             
           </div>
@@ -421,10 +434,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/02/《架构到底是什么？》读后感/" rel="prev" title="《架构到底是什么？》读后感">
-                《架构到底是什么？》读后感 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -473,8 +482,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -536,6 +554,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL逻辑架构"><span class="nav-number">1.</span> <span class="nav-text">MySQL逻辑架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL查询过程"><span class="nav-number">2.</span> <span class="nav-text">MySQL查询过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端-服务器通信协议"><span class="nav-number">3.</span> <span class="nav-text">客户端/服务器通信协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询缓存"><span class="nav-number">4.</span> <span class="nav-text">查询缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语法解析和预处理"><span class="nav-number">5.</span> <span class="nav-text">语法解析和预处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询优化"><span class="nav-number">6.</span> <span class="nav-text">查询优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询执行引擎"><span class="nav-number">7.</span> <span class="nav-text">查询执行引擎</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#响应客户端"><span class="nav-number">8.</span> <span class="nav-text">响应客户端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">9.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
