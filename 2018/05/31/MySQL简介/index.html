@@ -102,17 +102,20 @@
 
 
 
-  <meta name="description" content="MySQL是我们在开发中最常用的数据库之一，它满足我们平常大部分的需求，而且它还是免费开源的。 MySQL逻辑架构MySQL的逻辑架构总共有三层">
+  <meta name="description" content="MySQL是我们在开发中最常用的数据库之一，它满足我们平常大部分的需求，而且它还是免费开源的。 MySQL逻辑架构MySQL简介MySQL的逻辑架构总共有三层">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL简介">
 <meta property="og:url" content="http://liangjieheng.github.io/2018/05/31/MySQL简介/index.html">
 <meta property="og:site_name" content="LJH’s Blog">
-<meta property="og:description" content="MySQL是我们在开发中最常用的数据库之一，它满足我们平常大部分的需求，而且它还是免费开源的。 MySQL逻辑架构MySQL的逻辑架构总共有三层">
+<meta property="og:description" content="MySQL是我们在开发中最常用的数据库之一，它满足我们平常大部分的需求，而且它还是免费开源的。 MySQL逻辑架构MySQL简介MySQL的逻辑架构总共有三层">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-31T10:20:24.305Z">
+<meta property="og:image" content="http://liangjieheng.github.io/2018/05/31/MySQL简介/MySQL简介/2012031510324452.png">
+<meta property="og:image" content="http://liangjieheng.github.io/2018/05/31/MySQL简介/MySQL简介/1527600710376.jpg">
+<meta property="og:updated_time" content="2018-06-01T01:50:30.359Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL简介">
-<meta name="twitter:description" content="MySQL是我们在开发中最常用的数据库之一，它满足我们平常大部分的需求，而且它还是免费开源的。 MySQL逻辑架构MySQL的逻辑架构总共有三层">
+<meta name="twitter:description" content="MySQL是我们在开发中最常用的数据库之一，它满足我们平常大部分的需求，而且它还是免费开源的。 MySQL逻辑架构MySQL简介MySQL的逻辑架构总共有三层">
+<meta name="twitter:image" content="http://liangjieheng.github.io/2018/05/31/MySQL简介/MySQL简介/2012031510324452.png">
 
 
 
@@ -327,12 +330,24 @@
                 
               
 
-              <time title="创建时间：2018-05-31 16:15:00 / 修改时间：18:20:24" itemprop="dateCreated datePublished" datetime="2018-05-31T16:15:00+08:00">2018-05-31</time>
+              <time title="创建时间：2018-05-31 16:15:00" itemprop="dateCreated datePublished" datetime="2018-05-31T16:15:00+08:00">2018-05-31</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-06-01 09:50:30" itemprop="dateModified" datetime="2018-06-01T09:50:30+08:00">2018-06-01</time>
               
             
           </span>
@@ -384,10 +399,10 @@
 
       
         <p>MySQL是我们在开发中最常用的数据库之一，它满足我们平常大部分的需求，而且它还是免费开源的。</p>
-<h3 id="MySQL逻辑架构"><a href="#MySQL逻辑架构" class="headerlink" title="MySQL逻辑架构"></a>MySQL逻辑架构</h3><p>MySQL的逻辑架构总共有三层<br><a id="more"></a><br><strong>服务层</strong><br>服务层主要负责连接处理，安全认证等</p>
+<h3 id="MySQL逻辑架构"><a href="#MySQL逻辑架构" class="headerlink" title="MySQL逻辑架构"></a>MySQL逻辑架构</h3><p>MySQL简介<br><img src="MySQL简介/2012031510324452.png" alt="2012031510324452"><br>MySQL的逻辑架构总共有三层<br><a id="more"></a><br><strong>服务层</strong><br>服务层主要负责连接处理，安全认证等</p>
 <p><strong>核心层</strong><br>核心层主要负责查询解析，分析，优化，缓存等。存储过程，触发器，视图<br>也在这层实现。</p>
 <p><strong>存储引擎</strong><br>存储引擎层负责MySQL的数据存储和提取。核心服务层主要通过数量不多的API与存储引擎交互。</p>
-<h3 id="MySQL查询过程"><a href="#MySQL查询过程" class="headerlink" title="MySQL查询过程"></a>MySQL查询过程</h3><p>主要有6个关注点。</p>
+<h3 id="MySQL查询过程"><a href="#MySQL查询过程" class="headerlink" title="MySQL查询过程"></a>MySQL查询过程</h3><p><img src="MySQL简介/1527600710376.jpg" alt="1527600710376"><br>通过这幅图，我们可以对MySQL的查询过程有了大概的了解。根据图中所示，主要有6个关注点</p>
 <h3 id="客户端-服务器通信协议"><a href="#客户端-服务器通信协议" class="headerlink" title="客户端/服务器通信协议"></a>客户端/服务器通信协议</h3><p>有网络通讯，必定有通信协议的存在。MySQL通讯是半双工的，也就是说客户端与服务端通讯是双向的，要么客户端发送请求给服务端，要么服务端返回请求给客户端。<br>客户端只能通过一个数据包把请求发送给客户端。而服务端返回客户端的数据则可以通过多个数据包，而在实际的开发中，去除不必要的查询会加快数据库的响应速度。</p>
 <h3 id="查询缓存"><a href="#查询缓存" class="headerlink" title="查询缓存"></a>查询缓存</h3><p>在解析sql语句的时候，如果缓存打开了，MySQL会把结果直接返回给客户端，而不用就走后面的步骤。注意的如果两个sql语句不一样，包括增加了些空格等会导致不命中缓存。<br>MySQL会把缓存放在一张类似于hashmap数据结构的引用表中。<br>MySQL缓存失效与涉及的每张表的结构和数据发生变更有关的，任何的写操作都会到值缓存的失效。</p>
 <h3 id="语法解析和预处理"><a href="#语法解析和预处理" class="headerlink" title="语法解析和预处理"></a>语法解析和预处理</h3><p>这一过程主要是用来验证sql是否合法。语法解析会把sql语句生成解析树，通过语法规则来验证，比如验证。<br>关键字是否正确等等。预处理会根据MySQL规则验证解析树，比如检查字段是否存在等。</p>
